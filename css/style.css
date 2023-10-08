@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/*-------------------------------------------
+　全体に関わるレイアウト設定
+-------------------------------------------*/
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/*-------------------------------------------
+　header のレイアウト設定
+-------------------------------------------*/
+
+#menu{
+    height: 50px;
+    /* padding使ったらスマホで崩れるから不適
+    padding: 0px 200px;*/
+    display: flex;
+    /*space-betweenは最初のアイテムが先頭、最後のアイテムが右端によるから不適
+    justify-content: space-between; */
+    justify-content: center;
+  }
+
+#menu ul{
+    /* inlineはサイズ指定できない。paddingとかしか指定できない 
+    *  ただ、inline宣言する前なら指定できる模様
+    */
+    width: 500px;
+    /* ヘッダアイテムを横並びにするために必要だと勘違い。不要だった
+    display: inline; */
+
+  /* ヘッダアイテムを横並びにするための定義 */
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+#menu li{
+    /* これでリストの●を消す */
+    list-style: none;
+    margin-left: 20px;
+  }
+
+#top a{
+  background-color: lightsalmon;
+  padding: 5px;
+  white-space: nowrap
+
+}
+header img{
+  /* 100%で横幅いっぱいになる */
+  width: 100%;
+}
+
+ 
+
+/*-------------------------------------------
+　mainのレイアウト設定
+-------------------------------------------*/
+
+
+
+ 
+
+/*-------------------------------------------
+　sectionごとのレイアウト設定
+-------------------------------------------*/
+
+section{
+    text-align:center
+}
+
+h2{
+  text-decoration:underline;
+}
+
+/* プロフィール欄のスタイル 横並び */
+#profile{
+    /* 横並びにして中央揃え */
+    display: flex;
+    justify-content: center;
+}
+
+#profile img{
+  width: 100px;
+  height: 100px;
+  border-radius:50%;
+}
+
+#profile div{
+  width:450px;
+  font-size: small;
+  text-align: left;
+}
+
+/* 料理欄のスタイル 横並び */
+#cokkings ul{
+  display: flex;
+  justify-content: center;
+}
+
+#cokkings li{
+  list-style: none;
+}
+
+#cokkings img{
+  width: 200px;
+}
+/*-------------------------------------------
+　footerのレイアウト設定
+-------------------------------------------*/
+
+footer{
+  font-size: small;
+  text-align: center;
+}
+
+ 
+
+/*-------------------------------------------
+　スマートフォンのレイアウト設定
+-------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  #menu a{
+    /* aタグをblockにしないとwidthが効かない */
+    display: block;
+
+  }
+  #menu {
+    width: 100%;
+    font-size: small;
+  }
+  
+  header figure{
+    /* モバイルの場合marginが目立つので除去*/
+    margin: 0px;
+  }
+  header img{
+    /* 100%で横幅いっぱいになる */
+    width: 100%;
+  }
+
+  /* スマホの場合は、料理欄のスタイル 縦並び */
+  #cokkings ul{
+    display: block;
+    margin: auto;
+    padding: 0px;
+  }
+
+  #cokkings img{
+    width: 100%;
+  }
+
+}
