@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanako's Cooking</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>  
+  <!-- navタグの中にはリンクを持つ要素を全部書く？ -->
+  <nav id="menu">
+    <p id="top"><a href="#top">Hanako's Cooking</a></p>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cooking">Cooking</a></li>
+    </ul>
+  </nav>
+  <!-- 画像にfigureタグはいる？ figure使うとmargin入るため不要？ -->
+  <figure><img src="img/top.jpeg" alt=""></figure>
+</header>
+<main>
+    <section id="about">
+        <header>
+            <h2><span>About</span></h2>
+        </header>
+        <!-- divタグとarticleタグで悩んだ。違いは？この場合は？ -->
+        <!-- idを使うかclassを使うか複数要素があるときはclass？ -->
+        <div id="profile">
+            <figure class="image">
+                <img src="img/about.jpeg" alt="">
+            </figure>
+            <div> <!-- cssはidを指定するのかタグで指定するのか？ -->
+              <h3>HANAKO YAMADA</h3>
+              <p>
+                  19xx年生まれ。東京都出身。<br>
+                  テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
+            </div>
+        </div>
+    </section>
+    <section id="cooking">
+        <header>
+            <h2><span>Cooking</span></h2>
+        </header>
+        <div id="cokkings">
+            <ul>
+                <li>
+                    <figure class="cokking-image">
+                        <img src="img/cook1.jpeg" alt="">
+                    </figure>
+                    <div>
+                        <h3>タイトルタイトル</h3>
+                        <p>テキストテキストテキスト</p>
+                    </div>
+                </li>
+                <li>
+                    <figure class="cokking-image">
+                        <img src="img/cook2.jpeg" alt="">
+                    </figure>
+                    <div>
+                        <h3>タイトルタイトル</h3>
+                        <p>テキストテキストテキスト</p>
+                    </div>
+                </li>
+                <li>
+                    <figure class="cokking-image">
+                        <img src="img/cook3.jpeg" alt="">
+                    </figure>
+                    <div>
+                        <h3>タイトルタイトル</h3>
+                        <p>テキストテキストテキスト</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2022 Hanako Yamada hub-e</p>
+</footer>
+<script src="example.js"></script>
+</body>
+</html>
